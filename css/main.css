@@ -79,6 +79,66 @@ footer {
     padding: 1em;
 }
 
+/* start positioning styles */
+
+
+
+
+/* end positioning styles */
+
+.text-align-center{
+   text-align:center;
+   background-color:aqua;
+}
+
+
+.margin-auto > div{
+   margin:auto;
+   width:50%;
+   background-color:beige;
+   text-align:center;
+}
+
+<div class="my-row">
+   <div class="my-column" style="background-color:#aaa;">
+       <h2>Column 1</h2>
+       <p>Left column desktop, stacks in mobile</p>
+       <p>From <a href="https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_two_columns_responsive" target="_blank">W3Schools</a></p>
+   </div>
+   <div class="my-column" style="background-color:#bbb;">
+       <h2>Column 2</h2>
+       <p>Right column desktop, stacks in mobile</p>
+   </div>
+</div>
+
+@media all and (max-width:500px) {
+   .my-column {
+       width: 100%;
+     }
+}
+/* Allows box to take up full space, ignoring padding/margin */
+* {
+   box-sizing: border-box;
+ }
+
+
+/* Create two equal columns that floats next to each other */
+.my-column {
+   float: left;
+   width: 50%;
+   padding: 10px;
+   min-height: 300px; /* Can be removed. Only for demonstration */
+ }
+  /* Clear floats after the columns */
+ .my-row:after {
+   content: "";
+   display: table;
+   clear: both;
+ }
+
+
+
+
 /* Responsive rules */
 
 /* DESKTOP */
