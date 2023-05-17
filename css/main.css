@@ -81,63 +81,108 @@ footer {
 
 /* start positioning styles */
 
-
-
-
-/* end positioning styles */
-
 .text-align-center{
-   text-align:center;
-   background-color:aqua;
-}
-
-
-.margin-auto > div{
-   margin:auto;
-   width:50%;
-   background-color:beige;
-   text-align:center;
-}
-
-<div class="my-row">
-   <div class="my-column" style="background-color:#aaa;">
-       <h2>Column 1</h2>
-       <p>Left column desktop, stacks in mobile</p>
-       <p>From <a href="https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_two_columns_responsive" target="_blank">W3Schools</a></p>
-   </div>
-   <div class="my-column" style="background-color:#bbb;">
-       <h2>Column 2</h2>
-       <p>Right column desktop, stacks in mobile</p>
-   </div>
-</div>
-
-@media all and (max-width:500px) {
-   .my-column {
-       width: 100%;
-     }
-}
-/* Allows box to take up full space, ignoring padding/margin */
+    text-align:center;
+    background-color:aqua;
+ }
+ 
+ 
+ .margin-auto > div{
+    margin:auto;
+    width:50%;
+    background-color:beige;
+    text-align:center;
+ }
+ 
+ /* Allows box to take up full space, ignoring padding/margin */
 * {
-   box-sizing: border-box;
+    box-sizing: border-box;
+  }
+ 
+ 
+ /* Create two equal columns that floats next to each other */
+ .my-column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    min-height: 300px; /* Can be removed. Only for demonstration */
+  }
+   /* Clear floats after the columns */
+  .my-row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  @media all and (max-width:500px) {
+    .my-column {
+        width: 100%;
+     }
  }
 
+ .fa {
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+  }
+   .fa:hover {
+      opacity: 0.7;
+  }
+   .fa-facebook {
+    background: #3B5998;
+    color: white;
+    padding: 20px 25px;
+  }
+   .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+   .fa-youtube {
+    background: #bb0000;
+    color: white;
+  }
+   .fa-instagram {
+    background: #125688;
+    color: white;
+  }
+   .fa-snapchat-ghost {
+    background: #fffc00;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  } 
 
-/* Create two equal columns that floats next to each other */
-.my-column {
-   float: left;
-   width: 50%;
-   padding: 10px;
-   min-height: 300px; /* Can be removed. Only for demonstration */
+  .social-container {
+    display: flex;
+    justify-content: space-evenly;
+  } 
+
+  /* flexible image rules start here */
+
+
+.flexible img{
+    width:100%;
  }
-  /* Clear floats after the columns */
- .my-row:after {
-   content: "";
-   display: table;
-   clear: both;
+ 
+ 
+ .flexible{
+    display: flex;
+    justify-content: space-evenly;
  }
+ 
+ 
+ /* flexible image rules end here */
+ 
+/* end positioning styles */
+ 
 
-
-
+.social-container {
+    display: flex;
+    justify-content: space-evenly;
+  }
+ 
 
 /* Responsive rules */
 
